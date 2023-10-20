@@ -18,8 +18,8 @@ def cargar_argumentos_desde_archivo(args):
 		args.tiempoespera = config['Configuracion'].get('tiempoespera', None)
 	if not args.profundidad and 'Configuracion' in config:
 		args.profundidad = config['Configuracion'].get('profundidad', None)
-	if not args.profundidad and 'Configuracion' in config:
-		args.profundidad = config['Configuracion'].get('paginas', None)
+	if not args.paginas and 'Configuracion' in config:
+		args.paginas = config['Configuracion'].get('paginas', None)
 	carga_resoluciones = config.items("Resoluciones")
 	for key, resolucon in carga_resoluciones:
 		resoluciones.append(resolucon)
